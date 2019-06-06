@@ -1,0 +1,8 @@
+#!/bin/bash
+
+./adb shell screencap -p /sdcard/autojump.png
+./adb pull /sdcard/autojump.png ~/Desktop/
+
+./adb shell input swipe x y x y time(ms)
+
+tesseract ~/Desktop/Q/BLDq4.png question_and_answer -l chi_sim+eng
